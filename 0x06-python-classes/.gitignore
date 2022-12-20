@@ -1,1 +1,1 @@
-*.pcy
+__pycache__/*
