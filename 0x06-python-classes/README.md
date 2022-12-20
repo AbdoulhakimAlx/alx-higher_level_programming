@@ -68,7 +68,7 @@ Documentation is now mandatory! Each module, class, and method must contain docs
 Write an empty class Square that defines a square:
 
 -You are not allowed to import any module
-`guillaume@ubuntu:~/0x06$ cat 0-main.py
+```guillaume@ubuntu:~/0x06$ cat 0-main.py
 #!/usr/bin/python3
 Square = __import__('0-square').Square
 
@@ -79,7 +79,8 @@ print(my_square.__dict__)
 guillaume@ubuntu:~/0x06$ ./0-main.py
 <class '0-square.Square'>
 {}
-guillaume@ubuntu:~/0x06$`
+guillaume@ubuntu:~/0x06$
+```
 
 1. Square with size
 Write a class Square that defines a square by: (based on 0-square.py)
@@ -92,7 +93,8 @@ Why?
 Why size is private attribute?
 
 The size of a square is crucial for a square, many things depend of it (area computation, etc.), so you, as class builder, must control the type and value of this attribute. One way to have the control is to keep it privately. You will see in next tasks how to get, update and validate the size value.
-`guillaume@ubuntu:~/0x06$ cat 1-main.py
+
+```guillaume@ubuntu:~/0x06$ cat 1-main.py
 #!/usr/bin/python3
 Square = __import__('1-square').Square
 
@@ -115,7 +117,8 @@ guillaume@ubuntu:~/0x06$ ./1-main.py
 {'_Square__size': 3}
 'Square' object has no attribute 'size'
 'Square' object has no attribute '__size'
-guillaume@ubuntu:~/0x06$`
+guillaume@ubuntu:~/0x06$
+```
 
 2. Size validation
 Write a class Square that defines a square by: (based on 1-square.py)
@@ -126,7 +129,7 @@ size must be an integer, otherwise raise a TypeError exception with the message 
 if size is less than 0, raise a ValueError exception with the message size must be >= 0
 You are not allowed to import any module
 
-`guillaume@ubuntu:~/0x06$ cat 2-main.py
+```guillaume@ubuntu:~/0x06$ cat 2-main.py
 #!/usr/bin/python3
 Square = __import__('2-square').Square
 
@@ -171,7 +174,8 @@ guillaume@ubuntu:~/0x06$ ./2-main.py
 'Square' object has no attribute '__size'
 size must be an integer
 size must be >= 0
-guillaume@ubuntu:~/0x06$ `
+guillaume@ubuntu:~/0x06$
+```
 
 3. Area of a square
 Write a class Square that defines a square by: (based on 2-square.py)
@@ -182,7 +186,7 @@ size must be an integer, otherwise raise a TypeError exception with the message 
 if size is less than 0, raise a ValueError exception with the message size must be >= 0
 Public instance method: def area(self): that returns the current square area
 You are not allowed to import any module
-`guillaume@ubuntu:~/0x06$ cat 3-main.py
+```guillaume@ubuntu:~/0x06$ cat 3-main.py
 #!/usr/bin/python3
 Square = __import__('3-square').Square
 
@@ -207,7 +211,8 @@ Area: 9
 'Square' object has no attribute 'size'
 'Square' object has no attribute '__size'
 Area: 25
-guillaume@ubuntu:~/0x06$ `
+guillaume@ubuntu:~/0x06$
+```
 
 4. Access and update private attribute
 mandatory
@@ -227,7 +232,7 @@ Why a getter and setter?
 
 Reminder: size is a private attribute. We did that to make sure we control the type and value. Getter and setter methods are not 100% Python, but more OOP. With them, you will be able to validate the assignment of a private attribute and also define how getting the attribute value will be available from outside - by copy? by assignment? etc. Also, adding type/value validation in the setter will centralize the logic, since you will do it in only one place.
 
-`guillaume@ubuntu:~/0x06$ cat 4-main.py
+```guillaume@ubuntu:~/0x06$ cat 4-main.py
 #!/usr/bin/python3
 Square = __import__('4-square').Square
 
@@ -247,7 +252,8 @@ guillaume@ubuntu:~/0x06$ ./4-main.py
 Area: 7921 for size: 89
 Area: 9 for size: 3
 size must be an integer
-guillaume@ubuntu:~/0x06$`
+guillaume@ubuntu:~/0x06$
+```
 
 5. Printing a square
 mandatory
@@ -263,7 +269,7 @@ Public instance method: def area(self): that returns the current square area
 Public instance method: def my_print(self): that prints in stdout the square with the character #:
 if size is equal to 0, print an empty line
 You are not allowed to import any module
-`guillaume@ubuntu:~/0x06$ cat 5-main.py
+```guillaume@ubuntu:~/0x06$ cat 5-main.py
 #!/usr/bin/python3
 Square = __import__('5-square').Square
 
@@ -300,7 +306,8 @@ guillaume@ubuntu:~/0x06$ ./5-main.py
 --
 
 --
-guillaume@ubuntu:~/0x06$`
+guillaume@ubuntu:~/0x06$
+```
 
 6. Coordinates of a square
 mandatory
@@ -321,7 +328,7 @@ Public instance method: def my_print(self): that prints in stdout the square wit
 if size is equal to 0, print an empty line
 position should be use by using space - Don’t fill lines by spaces when position[1] > 0
 You are not allowed to import any module
-`guillaume@ubuntu:~/0x06$ cat 6-main.py
+```guillaume@ubuntu:~/0x06$ cat 6-main.py
 #!/usr/bin/python3
 Square = __import__('6-square').Square
 
@@ -354,7 +361,8 @@ ___###$
 ___###$
 ___###$
 --$
-guillaume@ubuntu:~/0x06$ `
+guillaume@ubuntu:~/0x06$
+```
 
 7. Singly linked list
 #advanced
@@ -378,7 +386,7 @@ print the entire list in stdout
 one node number by line
 Public instance method: def sorted_insert(self, value): that inserts a new Node into the correct sorted position in the list (increasing order)
 You are not allowed to import any module
-`guillaume@ubuntu:~/0x06$ cat 100-main.py
+```guillaume@ubuntu:~/0x06$ cat 100-main.py
 #!/usr/bin/python3
 SinglyLinkedList = __import__('100-singly_linked_list').SinglyLinkedList
 
@@ -408,8 +416,8 @@ guillaume@ubuntu:~/0x06$ ./100-main.py
 5
 10
 12
-guillaume@ubuntu:~/0x06$ `
-
+guillaume@ubuntu:~/0x06$
+```
 8. Print Square instance
 #advanced
 Write a class Square that defines a square by: (based on 6-square.py)
@@ -430,7 +438,7 @@ if size is equal to 0, print an empty line
 position should be use by using space
 Printing a Square instance should have the same behavior as my_print()
 You are not allowed to import any module
-`guillaume@ubuntu:~/0x06$ cat 101-main.py
+```guillaume@ubuntu:~/0x06$ cat 101-main.py
 #!/usr/bin/python3
 Square = __import__('101-square').Square
 
@@ -455,8 +463,8 @@ ____#####$
 ____#####$
 ____#####$
 ____#####$
-guillaume@ubuntu:~/0x06$ `
-
+guillaume@ubuntu:~/0x06$ 
+```
 9. Compare 2 squares
 #advanced
 Write a class Square that defines a square by: (based on 4-square.py)
@@ -470,7 +478,7 @@ Instantiation with size: def __init__(self, size=0):
 Public instance method: def area(self): that returns the current square area
 Square instance can answer to comparators: ==, !=, >, >=, < and <= based on the square area
 You are not allowed to import any module
-`guillaume@ubuntu:~/0x06$ cat 102-main.py
+```guillaume@ubuntu:~/0x06$ cat 102-main.py
 #!/usr/bin/python3
 Square = __import__('102-square').Square
 
@@ -494,13 +502,14 @@ guillaume@ubuntu:~/0x06$ ./102-main.py
 Square 5 < Square 6
 Square 5 <= Square 6
 Square 5 != Square 6
-guillaume@ubuntu:~/0x06$ `
+guillaume@ubuntu:~/0x06$ 
+```
 
 10. ByteCode -> Python #5
 #advanced
 Write the Python class MagicClass that does exactly the same as the following Python bytecode:
 
-`Disassembly of __init__:
+```Disassembly of __init__:
  10           0 LOAD_CONST               1 (0)
               3 LOAD_FAST                0 (self)
               6 STORE_ATTR               0 (_MagicClass__radius)
@@ -548,7 +557,8 @@ Disassembly of circumference:
              10 LOAD_FAST                0 (self)
              13 LOAD_ATTR                2 (_MagicClass__radius)
              16 BINARY_MULTIPLY
-             17 RETURN_VALUE`
+             17 RETURN_VALUE
+```
 Tip: Python bytecode
 
 
