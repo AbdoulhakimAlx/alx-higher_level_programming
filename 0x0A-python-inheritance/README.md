@@ -1,6 +1,6 @@
 # 0x0A-python-inheritance
 
-** Python OOP  Inheritance**
+**Python OOP  Inheritance**
 
 # Resources
 ## Read or watch:
