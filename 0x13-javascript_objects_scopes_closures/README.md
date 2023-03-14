@@ -6,8 +6,6 @@ objects and ES6-style classes.
 
 ## Tests :heavy_check_mark:
 
-* [tests](./tests): Folder of test files. Provided by ALX
-
 ## Function Prototypes :floppy_disk:
 
 Prototypes for functions written in this project:
